@@ -1,6 +1,9 @@
 import { useEffect } from "react";
 import { getRedirectResult } from "firebase/auth";
 import SignUpForm from "../../components/sign-up-form/sign-up-form.component";
+import Button from "../../components/button/button.component";
+import FormInput from "../../components/form-input/form-input.component";
+
 import {
   auth,
   signInWithGooglePopup,
@@ -8,7 +11,7 @@ import {
   signInWithGoogleRedirect,
 } from "../../utils/firebase/firebase.utils";
 
-const SignIn = () => {
+const Authentication = () => {
   useEffect(async () => {
     const response = await getRedirectResult(auth);
     if (response) {
@@ -37,4 +40,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default Authentication;
