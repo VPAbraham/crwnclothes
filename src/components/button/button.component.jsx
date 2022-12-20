@@ -6,7 +6,11 @@ const BUTTON_TYPES_CLASSES = {
 };
 
 const Button = ({ children, buttonType }) => {
-  return <button className="button-container">{children}</button>;
+  return (
+    <button className={`button-container ${BUTTON_TYPES_CLASSES[buttonType]}`}>
+      {children}
+    </button>
+  );
 };
 
 export default Button;
